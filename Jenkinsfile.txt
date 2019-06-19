@@ -1,24 +1,7 @@
-pipeline{
- 
-   agent any 
-   stages{
-      stage("one"){
-        steps{
-      echo "hello first stage"
-}
-}
-     stage("two"){
-        steps{
-      echo "hello second stage"
-      input("Want to proceed?")
-}
-}
-     stage("three"){
-        steps{
-      echo "hello last stage"
-}
+node{
+stage('one'){
+sh "echo 'hello world'"
 }
 
 
-}
 }
